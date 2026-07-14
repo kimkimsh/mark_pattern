@@ -1,0 +1,21 @@
+{
+  "name": "mark-pattern",
+  "owner": {
+    "name": "kimkimsh",
+    "url": "https://github.com/kimkimsh"
+  },
+  "metadata": {
+    "description": "A design discipline for Claude Code. One command loads it; it then deletes unearned structure, traces what happens when things fail, and makes every recommendation carry its own downside. Language-neutral.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "mark-pattern",
+      "source": "./plugins/mark-pattern",
+      "description": "Turns on a design discipline for the session: structure must be earned before it is added, failure paths get traced across boundaries, and no recommendation ships without naming what it makes worse.",
+      "version": "1.0.0",
+      "category": "development",
+      "homepage": "https://github.com/kimkimsh/mark_pattern"
+    }
+  ]
+}
