@@ -1,6 +1,6 @@
 ---
 name: mark-pattern
-description: This skill should be used when the user runs "/mark-pattern", and whenever design or structure is the actual question — deciding where a boundary goes, whether to add an interface, class, layer, wrapper, factory or pattern, what a system does when a dependency fails or returns stale data, whether existing structure has earned its place, or why a past choice was made. Use it for architecture questions, structural code review, and refactoring in any language. Also triggers on phrases like "should I add an interface", "is this over-engineered", "where should this live", "what happens if X is down", "silent failure", "it runs but nothing happens", "review this architecture", "review the structure", "is this dead code", "why is this so coupled", "should we split this", "fail open", "this keeps breaking in the same place".
+description: This skill should be used whenever the user writes "mark-pattern" or "mark pattern" anywhere in a message — at the start, mid-sentence, or in passing, in any language, and whether or not it carries a leading slash — because a slash command only fires at the start of a message and the user reaching for the name is asking for this. When it appears with a task wrapped around it ("refactor this with mark-pattern", "mark-pattern 으로 리뷰해줘"), turn the discipline on and do the task. Use it also whenever design or structure is the actual question — deciding where a boundary goes, whether to add an interface, class, layer, wrapper, factory or pattern, what a system does when a dependency fails or returns stale data, whether existing structure has earned its place, or why a past choice was made. Use it for architecture questions, structural code review, and refactoring in any language. Also triggers on phrases like "should I add an interface", "is this over-engineered", "where should this live", "what happens if X is down", "silent failure", "it runs but nothing happens", "review this architecture", "review the structure", "is this dead code", "why is this so coupled", "should we split this", "fail open", "this keeps breaking in the same place".
 version: 1.0.0
 ---
 
@@ -9,6 +9,8 @@ version: 1.0.0
 A design discipline. It exists because a model asked to design will reliably do four things: add structure nothing has earned, leave the failure branch unwritten, present a recommendation with no downside, and agree with whatever the user just argued for.
 
 Those are execution gaps, not knowledge gaps. The model already knows what coupling is. It will still hand you a factory with one implementation. So this skill is built out of gates and required fields — things that are either filled or not — rather than advice, which is negotiable.
+
+**This is a standing instruction, not a one-time step.** Once it is loaded — by the command, or by the user naming it, or by the topic — it applies to every design, review, and refactoring answer for the rest of the session, not only to the message that triggered it. The user turns it off by saying so.
 
 ## What reaches the user
 
@@ -20,7 +22,9 @@ Those are execution gaps, not knowledge gaps. The model already knows what coupl
 
 Then:
 
-- **Never name the machinery.** The words "Move 1", "Move 2a", "Move 3", "the gate", "the skill", "required fields" — and any reference to this document — do not appear in the output. The user asked about their code. They did not ask about your process, and they do not know a skill is running.
+- **Never name the machinery.** The words "Move 1", "Move 2a", "Move 3", "the gate", "required fields" — and any description of this document's structure — do not appear in the output. The user asked about their code. They did not ask about your process.
+
+  (Saying *that* mark-pattern is on, once, when they just turned it on, is not machinery — they asked for it and they need to know it took. Naming the moves you ran to reach an answer is.)
 - **Never print an empty worksheet.** A gate that found nothing is one sentence, not a heading with blank rows. *"Nothing in `types/index.ts` should be removed — those are data shapes, not seams."* Then move on.
 - **Lead with the finding.** They asked what to fix; show them something fixable in the first screen. Scope disclosure ("I only have the files you pasted") earns one sentence when it changes what you can claim, and none when it doesn't.
 - **Findings are prose**, with a bolded lead sentence. Code fences are for code.
