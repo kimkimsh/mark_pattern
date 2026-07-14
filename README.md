@@ -11,7 +11,7 @@ It exists because a coding agent asked to design will reliably do four things:
 
 Those are not knowledge gaps. The model knows what coupling is. It will still hand you a factory with one implementation. **mark-pattern is built out of gates and required fields — things that are either filled or not — rather than advice, which is negotiable.**
 
-Works in any language.
+Language-neutral by design. Tested on TypeScript, React, Go, and Python.
 
 ---
 
@@ -199,7 +199,7 @@ The research corpus itself is not published — it contains analysis of a privat
 No — and getting that wrong was the loudest finding in testing. A TS `interface` with no implementors is a **data type**, not a polymorphism seam: `interface Props`, every DTO, every function-argument shape. The plugin counts *call sites that receive more than one concrete implementation*, never `implements` declarations. Same for `Protocol` and `TypedDict` in Python, and for a Go interface declared at the consumer — which is idiomatic and correct even with one implementation today.
 
 **Does this work outside TypeScript, Python, and Go?**
-Yes. Those are just where the examples live. Every rule is about structure, not syntax.
+It should, and it has not been measured there — so here is the honest split. The plugin was live-fire tested against **TypeScript, React, Go, and Python**, each with a no-guidance control. Those four are where the evidence is. Every rule is about structure rather than syntax, and the one place a language's *semantics* actually change the answer — what an `interface` declaration means — is handled explicitly per language, so the design is meant to carry. But "meant to carry" is a claim about the design, not a measurement, and you should read it that way.
 
 **Will it fight my existing skills?**
 No. It makes no claim to run first and registers no gate. If you have `superpowers` installed, `brainstorming` still owns the pre-work gate; mark-pattern is the design *method* that runs while you are inside it.

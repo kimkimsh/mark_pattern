@@ -1,7 +1,7 @@
 {
   "name": "mark-pattern",
   "version": "1.0.0",
-  "description": "Turns on a design discipline for the session: structure must be earned before it is added, failure paths get traced across boundaries, and no recommendation ships without naming what it makes worse. Works in any language.",
+  "description": "Turns on a design discipline for the session: structure must be earned before it is added, failure paths get traced across boundaries, and no recommendation ships without naming what it makes worse. Language-neutral by design; tested on TypeScript, React, Go, and Python.",
   "author": {
     "name": "kimkimsh",
     "url": "https://github.com/kimkimsh"
