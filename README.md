@@ -58,7 +58,7 @@ If `/mark-pattern` is not recognized, the plugin loaded but the session predates
 | Command | What happens |
 |---|---|
 | `/mark-pattern` | Turns the discipline on for the session. Then just work — it applies as you go. |
-| `/mark-pattern <task>` | Applies it to that one thing. Session mode stays off. |
+| `/mark-pattern <task>` | Turns it on, then does that task under it. It stays on afterwards. |
 | `/mark-pattern off` | Back to normal. |
 
 The skill also activates on its own when design is the real question — *"should I add an interface here"*, *"is this over-engineered"*, *"what happens if that service is down"*, *"why does this keep breaking in the same place"*.
