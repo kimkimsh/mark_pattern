@@ -127,7 +127,7 @@ Instance 2 (file:line):      ______
 
 Two instances, both cited, both real. Not planned. Not likely. Present.
 
-> **On the ecosystem's anti-abstraction reflex.** Every other guidance skill points one way: no abstraction for a single use site. That prior is *correct*, and mark-pattern shares it — which is exactly why deletion runs first. But when two variation points genuinely exist, the rule has been *satisfied*, not violated, and refusing structure at that point is the same failure in the opposite direction. mark-pattern is the only thing in the ecosystem that says what to do when the second implementation actually arrives.
+> **On the ecosystem's anti-abstraction reflex.** Most guidance skills point one way: no abstraction for a single use site. That prior is *correct*, and mark-pattern shares it — which is exactly why deletion runs first. But when two variation points genuinely exist, the rule has been *satisfied*, not violated, and refusing structure at that point is the same failure in the opposite direction. When the second implementation arrives, build the seam — the two cited instances are what tell you where it goes. Matt Pocock's [`codebase-design`](https://github.com/mattpocock/skills/tree/main/skills/engineering/codebase-design) skill draws the same line: *"One adapter means a hypothetical seam. Two adapters means a real one."*
 
 ### 3. The unit of analysis is a path, not a file
 
@@ -178,7 +178,7 @@ This is distilled from a long research effort, not from a blog post.
 
 - **Five books, read cover to cover** (~3,100 pages) — software architecture, design patterns, OOA&D, clean code, and process — including the places where they contradict each other, and the places where they have aged badly.
 - **Six production repositories, ~408k lines**, read at source level across C++, Java, Python, and firmware. Rules here were earned by finding real defects, not deduced from a book.
-- **A full audit of all 363 installed Claude Code skills**, which is how the gap this fills was identified. Not one of them mentions a single design pattern by name. The only stance the ecosystem takes on structure is a uniform, correct, and entirely unconditioned anti-abstraction reflex — nobody says what to do when the second implementation arrives, nobody says how to decide where a boundary goes, and nobody records why.
+- **A full audit of the 363 Claude Code skills installed at the time**, which is how the gap this fills was identified. Not one of them mentioned a single design pattern by name. The only stance they took on structure was a uniform, correct, and entirely unconditioned anti-abstraction reflex — none said what to do when the second implementation arrives, how to decide where a boundary goes, or how to record why. Skills outside that audit cover part of this: Matt Pocock's `codebase-design` and `improve-codebase-architecture` give the same two-adapter rule, decide how a seam is built from the kind of dependency behind it, and offer a decision record when a proposed change is rejected. What mark-pattern adds is the deletion pass that runs before any addition, the path tracing above, and the two fields every recommendation must carry.
 - **Research into how coding agents actually fail at design** and, separately, into what makes a skill *work* at runtime instead of getting ignored.
 
 That last one shaped the form as much as the content. Three findings changed how this is written:
